@@ -1,0 +1,8 @@
+version: "3.9"
+
+services:
+  web:
+    container_name: converter
+    image: nofarmahani/change:latest
+    ports:
+      - "80:3000"
