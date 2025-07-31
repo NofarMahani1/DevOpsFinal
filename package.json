@@ -1,0 +1,24 @@
+{
+  "name": "devopsproj-unit",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve -s ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rotems00/DevOpsProj-Unit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rotems00/DevOpsProj-Unit/issues"
+  },
+  "homepage": "https://github.com/Rotems00/DevOpsProj-Unit#readme",
+  "description": "",
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}

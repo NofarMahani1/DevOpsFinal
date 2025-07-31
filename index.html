@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unit Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🔢 Unit Converter</h1>
+
+    <div class="converter">
+      <label for="unit-type">Choose a conversion:</label>
+      <select id="unit-type">
+        <option value="temp">🌡️ Celsius ↔ Fahrenheit</option>
+        <option value="length">📏 Meters ↔ Feet</option>
+        <option value="weight">⚖️ Kilograms ↔ Pounds</option>
+      </select>
+
+      <div class="input-row">
+        <input type="number" id="inputValue" placeholder="Enter value" />
+        <select id="direction">
+          <option value="1">A → B</option>
+          <option value="-1">B → A</option>
+        </select>
+      </div>
+
+      <button onclick="convert()">Convert</button>
+
+      <p id="result">Result: -</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
