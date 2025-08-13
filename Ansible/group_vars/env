@@ -1,0 +1,14 @@
+server_name: change-server
+env: dev
+
+vpc_name: change-vpc
+network: 10.1.0.0/16
+subnet_public: 10.1.0.0/24
+env_name: change 
+aws_region: eu-central-1
+subnet1: eu-central-1a
+
+keypair: Ansible
+aws_ubuntu_ami: ami-02003f9f0fde924ea
+server_type: t2.micro
+server_volume_size: 8

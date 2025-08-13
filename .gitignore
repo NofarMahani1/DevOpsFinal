@@ -7,3 +7,7 @@
 
 
 docker.env
+change.env
+
+*.pem
+*.key
