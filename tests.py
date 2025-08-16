@@ -24,7 +24,7 @@ def driver():
 
     for option in options:
         chrome_options.add_argument(option)
-    url="https://localhost"
+    url="http://localhost"
 
     chrome_options.add_experimental_option("excludeSwitches", ["enable-logging"])
 
