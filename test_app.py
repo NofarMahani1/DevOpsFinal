@@ -47,9 +47,9 @@ def test_dropdown_options(driver):
     units = Select(type_dropdown)
     options = [option.text for option in units.options]
     assert options == [
-        "🌡️ Celsius ↔️ Fahrenheit",
-        "📏 Meters ↔️ Feet",
-        "⚖️ Kilograms ↔️ Pounds"
+        "🌡️ Celsius ↔ Fahrenheit",
+        "📏 Meters ↔ Feet",
+        "⚖️ Kilograms ↔ Pounds"
     ], "Dropdown options are incorrect"
 
  ##################### Test 2- Perform a conversion and verify result #####################
