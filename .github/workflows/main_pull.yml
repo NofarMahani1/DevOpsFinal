@@ -9,10 +9,10 @@ jobs:
           - uses: actions/checkout@v4
           
           - name: Build Docker Image
-            run: docker build --tag UnitConv .
+            run: docker build --tag unitconv .
           
           - name: Run Docker
-            run: docker run -d --name container -p 80:3000 UnitConv
+            run: docker run -d --name container -p 80:3000 unitconv
             
           - name: Set up Python
             uses: actions/setup-python@v2
