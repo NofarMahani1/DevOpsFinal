@@ -14,10 +14,10 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
 
       - name: Build Docker Image
-        run: docker build . --tag ${{ secrets.DOCKER_USER }}/unitconv:latest
+        run: docker build . --tag ${{ secrets.DOCKER_USER }}/change:latest
 
       - name: push to DockerHub
-        run: docker push ${{ secrets.DOCKER_USER }}/unitconv:latest
+        run: docker push ${{ secrets.DOCKER_USER }}/change:latest
 
   deploy:
     needs: build
