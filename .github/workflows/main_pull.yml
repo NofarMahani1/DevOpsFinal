@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build Docker Image
-        run: docker build --tag unitconv .
+        run: docker build --tag change .
       - name: Run Docker
         run: docker run -d --name container -p 80:3000 change
       - name: Set up Python
