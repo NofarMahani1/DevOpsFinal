@@ -2,25 +2,23 @@ name: Test docker before merge
 on:
   pull_request:
       branches: [ main ]
+      workflow_dispatch:   
 jobs:
   build:
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v4
-          
-          - name: Build Docker Image
-            run: docker build --tag unitconv .
-          
-          - name: Run Docker
-            run: docker run -d --name container -p 80:3000 unitconv
-            
-          - name: Set up Python
-            uses: actions/setup-python@v2
-            with:
-              python-version: '3.9'
-              
-          - name: Install the necessary packages
-            run: pip install requests webdriver-manager selenium pytest
-            
-          - name: Run the PytTest script
-            run: pytest -rA
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Docker Image
+        run: docker build --tag unitconv .
+      - name: Run Docker
+        run: docker run -d --name container -p 80:3000 unitconv
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Install software
+        run: sudo apt-get install -y chromium-browser
+      - name: Install the necessary packages
+        run: pip install requests webdriver-manager selenium pytest
+      - name: Run the PyTest script
+        run: pytest -rA
